@@ -1,0 +1,35 @@
+_id: req_e10b9953a2e545c8bd2dd466064ade73
+type: Request
+parentId: wrk_cdc3478785ba4fab86b4a583f67d367d
+modified: 1695292525523
+created: 1695292356330
+url: localhost:3001/categories
+name: category Request
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"description":"teste",
+    	"name":"focus"
+    }
+parameters:
+  - id: pair_644ce8390c944e14b1af4d671001a575
+    name: ""
+    value: ""
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1695292356330
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

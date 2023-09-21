@@ -1,13 +1,11 @@
-// server.ts
 import express from 'express';
-import router from '../router/router';
-import { categoriesRoutes } from '../router/categories.router';
+import routes from '../src/router/router';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
-app.use('/categories', categoriesRoutes);
+app.use('/', routes);
 
 app.listen(PORT, () => {
   console.log(`Servidor está ouvindo na porta ${PORT}`);

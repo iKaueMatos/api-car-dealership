@@ -13,8 +13,6 @@ class CategoriesRepository {
         this.categories = [];
     }
 
-
-
     /**
      *
      * create category name and description

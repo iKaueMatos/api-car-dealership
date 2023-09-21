@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import CategoryClass from '../model/Category';
 import { CategoriesRepository } from '../repositories/CategoriesRepositories';
 
 const categoriesRepository = new CategoriesRepository();

@@ -13,9 +13,9 @@ Para executar o projeto em sua máquina local, siga os passos abaixo:
 ...
 
 ## 🛠️ Tecnologias Utilizadas
-<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=technology&logoColor=white" alt="Java Script">
-<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=technology&logoColor=white" alt="Node js">
-<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=technology&logoColor=white" alt="Type Script">
+<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=javascript&logoColor=white" alt="Java Script">
+<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=node.js&logoColor=white" alt="Node js">
+<img src="https://img.shields.io/badge/-tecnologia%201-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="Type Script">
 
 ## 🤝 Contribuindo com o projeto
 Se você quiser contribuir com o projeto, siga os passos abaixo:

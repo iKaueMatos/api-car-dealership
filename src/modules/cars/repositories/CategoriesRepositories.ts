@@ -1,12 +1,8 @@
 import CategoryClass from "../model/Category";
-
-interface ICreateCategoryDTO {
-    name: string;
-    description: string;
-}
+import { ICategoryRepository, ICreateCategoryDTO } from "./interfaces/ICategoryRepository";
 
 // DTO => Date transfer object
-class CategoriesRepository {
+class CategoriesRepository implements ICategoryRepository {
     private categories: CategoryClass[];
 
     constructor() {
@@ -30,8 +26,20 @@ class CategoriesRepository {
      * @return {*}  {CategoryClass[]}
      * @memberof CategoriesRepository
      */
-    list(): CategoryClass[] {
+    listCategory(): CategoryClass[] {
         return this.categories;
+    }
+
+    /**
+     *
+     * verification category aldreary exists
+     * @param {string} name
+     * @return {*}  {(CategoryClass | undefined)}
+     * @memberof CategoriesRepository
+     */
+    findByName(name: string): CategoryClass | undefined {
+        const category = this.categories.find((category) => category.name === name);
+        return category;
     }
 }
 

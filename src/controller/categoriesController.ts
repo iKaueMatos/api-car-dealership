@@ -27,9 +27,3 @@ export const listCategory = (request: Request, response: Response) => {
     const listCategoryAll = categoriesRepository.listCategory();
     response.json(listCategoryAll).status(200);
 };
-
-export const importCategoryUpload = (request: Request, response: Response) => {
-    const { file } = request;
-    console.log(file);
-    return response.send(201);
-}

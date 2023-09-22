@@ -32,7 +32,7 @@ class SpecificationRepository implements ISpecicationRespository {
      * @param {ICreateSpecificationDTO} { name, description }
      * @memberof Specification
      */
-    create({ name, description }: ICreateSpecificationDTO ): void {
+    public create({ name, description }: ICreateSpecificationDTO ): void {
         const category = new Specification(  name, description );
         this.specification.push(category);
     }
@@ -43,7 +43,7 @@ class SpecificationRepository implements ISpecicationRespository {
      * @return {*}  {Specification[]}
      * @memberof SpecificationRepository
      */
-    listSpecification(): Specification[] {
+    public listSpecification(): Specification[] {
         return this.specification;
     }
 
@@ -54,7 +54,7 @@ class SpecificationRepository implements ISpecicationRespository {
      * @return {*}  {(Specification | undefined)}
      * @memberof ISpecicationRespository
      */
-    findByName(name: string): Specification | undefined {
+    public findByName(name: string): Specification | undefined {
         const specification = this.specification.find((specifications) => specifications.name === name);
         return specification;
     }

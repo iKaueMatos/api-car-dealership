@@ -5,8 +5,24 @@ import { ICategoryRepository, ICreateCategoryDTO } from "./interfaces/ICategoryR
 class CategoriesRepository implements ICategoryRepository {
     private categories: CategoryClass[];
 
-    constructor() {
+    private static INSTANCE: CategoriesRepository;
+
+    private constructor() {
         this.categories = [];
+    }
+
+    /**
+     *
+     * create instance or return instance exists
+     * @param {CategoriesRepository} { instance }
+     * @return CategoriesRepository.INSTANCE
+     */
+    public static getInstance(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository();
+        }
+
+        return CategoriesRepository.INSTANCE; 
     }
 
     /**
@@ -15,7 +31,7 @@ class CategoriesRepository implements ICategoryRepository {
      * @param {ICreateCategoryDTO} { name, description }
      * @memberof CategoriesRepository
      */
-    create({ name, description }: ICreateCategoryDTO): void {
+    public create({ name, description }: ICreateCategoryDTO): void {
         const category = new CategoryClass(  name, description );
         this.categories.push(category);
     }
@@ -26,7 +42,7 @@ class CategoriesRepository implements ICategoryRepository {
      * @return {*}  {CategoryClass[]}
      * @memberof CategoriesRepository
      */
-    listCategory(): CategoryClass[] {
+    public listCategory(): CategoryClass[] {
         return this.categories;
     }
 
@@ -37,7 +53,7 @@ class CategoriesRepository implements ICategoryRepository {
      * @return {*}  {(CategoryClass | undefined)}
      * @memberof CategoriesRepository
      */
-    findByName(name: string): CategoryClass | undefined {
+    public findByName(name: string): CategoryClass | undefined {
         const category = this.categories.find((category) => category.name === name);
         return category;
     }

@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepositories';
 import { CreateCategoryService } from '../services/CreateCategoryService';
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 
 /**
  * Response create category
@@ -21,9 +21,15 @@ export const createCategory = (request: Request, response: Response) => {
 /**
  * Response list category
  * @param {CategoriesRepository} listCategoryAll
- * @return list category exist
+ * @return list specification exist
  */
 export const listCategory = (request: Request, response: Response) => {
     const listCategoryAll = categoriesRepository.listCategory();
     response.json(listCategoryAll).status(200);
 };
+
+export const importCategoryUpload = (request: Request, response: Response) => {
+    const { file } = request;
+    console.log(file);
+    return response.send(201);
+}

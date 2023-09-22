@@ -1,12 +1,29 @@
 import { Specification } from "../model/Specification";
+import { CategoriesRepository } from "./CategoriesRepositories";
 import { ICreateSpecificationDTO, ISpecicationRespository } from "./interfaces/ISpecificationRepository";
 
 // DTO => Date transfer object
 class SpecificationRepository implements ISpecicationRespository {
     private specification: Specification[];
 
-    constructor() {
+    private static INSTANCE : SpecificationRepository;
+
+    private constructor() {
         this.specification = [];
+    }
+
+    /**
+     *
+     * create instance or return instance exists
+     * @param {ISpecicationRespository} { instance }
+     * @return specificationRepository.INSTANCE
+     */
+    public static getInstance() : SpecificationRepository {
+        if (!SpecificationRepository.INSTANCE) {
+           SpecificationRepository.INSTANCE = new SpecificationRepository();
+        }
+
+        return SpecificationRepository.INSTANCE;
     }
 
     /**

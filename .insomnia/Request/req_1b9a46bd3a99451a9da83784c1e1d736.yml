@@ -1,0 +1,23 @@
+_id: req_1b9a46bd3a99451a9da83784c1e1d736
+type: Request
+parentId: wrk_cdc3478785ba4fab86b4a583f67d367d
+modified: 1695381005630
+created: 1695380964650
+url: localhost:3001/listSpecification
+name: List Request
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1695380964650
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

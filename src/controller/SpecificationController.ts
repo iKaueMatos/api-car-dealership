@@ -2,7 +2,7 @@ import { Response, Request } from "express";
 import { SpecificationRepository } from "../modules/cars/repositories/SpecificationRepositories";
 import { CreateSpecificationService } from "../services/CreateSpecificationService";
 
-const specificationRepository = new SpecificationRepository();
+const specificationRepository = SpecificationRepository.getInstance();
 
 /**
  * Response create specification

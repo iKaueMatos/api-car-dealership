@@ -1,0 +1,31 @@
+_id: req_a46b7d2fa8384ef6b3040e97b1e7d96a
+type: Request
+parentId: wrk_cdc3478785ba4fab86b4a583f67d367d
+modified: 1695381017568
+created: 1695380892186
+url: localhost:3001/specification
+name: Specification Request
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"name":"1.0",
+    	"description":"carro com motor 1.0 turbo"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1695380892186
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

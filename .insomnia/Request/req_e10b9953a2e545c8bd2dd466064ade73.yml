@@ -1,7 +1,7 @@
 _id: req_e10b9953a2e545c8bd2dd466064ade73
 type: Request
 parentId: wrk_cdc3478785ba4fab86b4a583f67d367d
-modified: 1695292525523
+modified: 1695293138887
 created: 1695292356330
 url: localhost:3001/categories
 name: category Request
@@ -12,7 +12,7 @@ body:
   text: |-
     {
     	"description":"teste",
-    	"name":"focus"
+    	"name":"SUV"
     }
 parameters:
   - id: pair_644ce8390c944e14b1af4d671001a575

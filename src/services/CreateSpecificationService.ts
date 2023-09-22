@@ -22,7 +22,7 @@ class CreateSpecificationService {
         const specificationAlreadyExists = this.specificationRepository.findByName(name);
     
         if (specificationAlreadyExists) {
-           throw new Error("category already exists");
+           throw new Error("specification already exists");
         }
     
         this.specificationRepository.create({ name, description })

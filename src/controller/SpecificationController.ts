@@ -19,8 +19,8 @@ export const createSpecification = (request: Request, response: Response) => {
 };
 
 /**
- * Response list category
- * @param {SpecificationRepository} listCategoryAll
+ * Response list specification
+ * @param {SpecificationRepository} listSpecificationAll
  * @return list specification exist
  */
 export const listSpecification = (request: Request, response: Response) => {

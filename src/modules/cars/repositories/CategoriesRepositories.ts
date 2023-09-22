@@ -1,5 +1,5 @@
 import CategoryClass from "../model/Category";
-import { ICategoryRepository, ICreateCategoryDTO } from "./ICategoryRepository";
+import { ICategoryRepository, ICreateCategoryDTO } from "./interfaces/ICategoryRepository";
 
 // DTO => Date transfer object
 class CategoriesRepository implements ICategoryRepository {

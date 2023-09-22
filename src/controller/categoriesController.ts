@@ -27,5 +27,3 @@ export const listCategory = (request: Request, response: Response) => {
     const listCategoryAll = categoriesRepository.listCategory();
     response.json(listCategoryAll).status(200);
 };
-
-

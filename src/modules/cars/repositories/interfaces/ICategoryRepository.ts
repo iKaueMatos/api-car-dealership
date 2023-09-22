@@ -1,4 +1,4 @@
-import CategoryClass from "../model/Category";
+import CategoryClass from "../../model/Category";
 
 /**
  *

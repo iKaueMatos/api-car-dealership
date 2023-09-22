@@ -1,21 +1,46 @@
 import { Specification } from "../model/Specification";
-import { ISpecicationRespository, ICreateSpecificationDTO } from "./ISpecificationRepository";
+import { ICreateSpecificationDTO, ISpecicationRespository } from "./interfaces/ISpecificationRepository";
 
-class SpecificationRepositories implements ISpecicationRespository {
-    private specifications : Specification[];
+// DTO => Date transfer object
+class SpecificationRepository implements ISpecicationRespository {
+    private specification: Specification[];
 
     constructor() {
-        this.specifications = [];
+        this.specification = [];
     }
 
-    create({ name, description }: ICreateSpecificationDTO): void {
-        const specification = new Specification(name, description);
+    /**
+     *
+     * create category name and description
+     * @param {ICreateSpecificationDTO} { name, description }
+     * @memberof Specification
+     */
+    create({ name, description }: ICreateSpecificationDTO ): void {
+        const category = new Specification(  name, description );
+        this.specification.push(category);
     }
 
-    findByName({name: string} : Specification | undefined) {
-        const specification = this.specifications.find((specification) => specifications.name === name);
+    /**
+     *
+     * return list specification available
+     * @return {*}  {Specification[]}
+     * @memberof SpecificationRepository
+     */
+    listSpecification(): Specification[] {
+        return this.specification;
+    }
+
+    /**
+     *
+     * verification specification aldreary exists
+     * @param {string} name
+     * @return {*}  {(Specification | undefined)}
+     * @memberof ISpecicationRespository
+     */
+    findByName(name: string): Specification | undefined {
+        const specification = this.specification.find((specifications) => specifications.name === name);
         return specification;
     }
 }
 
-export { SpecificationRepositories };
+export { SpecificationRepository };

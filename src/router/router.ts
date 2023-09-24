@@ -1,6 +1,6 @@
 import multer from 'multer';
 import { Router } from 'express';
-import { importCategoryUpload } from '../controller/ImportController';
+import { importFileCategory } from '../controller/ImportFileController';
 import { createCategory, listCategory } from '../controller/CategoriesController';
 import { createSpecification, listSpecification } from '../controller/SpecificationController';
 
@@ -13,7 +13,7 @@ const upload =  multer({
 router.use('/categories', createCategory);
 router.get('/categories', listCategory);
 //upload image 
-router.post('/import', upload.single("file"), importCategoryUpload)
+router.post('/import', upload.single("file") , importFileCategory)
 
 //specification routes
 router.post('/specification', createSpecification);

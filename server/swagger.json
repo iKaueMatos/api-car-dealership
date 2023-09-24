@@ -1,0 +1,11 @@
+{
+    "openapi": "3.0.8",
+    "info": {
+        "title": "Rentalx Documentation",
+        "description": "This is an API REST",
+        "version": "1.0.0",
+        "contact": {
+            "email": "ikauedeveloper@gmail.com"
+        }
+    }
+}

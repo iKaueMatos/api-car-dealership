@@ -10,8 +10,8 @@ const upload =  multer({
 });
 
 //categories routes
-router.use('/categories', createCategory);
-router.get('/categories', listCategory);
+router.post('/categories', createCategory);
+router.get('/list', listCategory);
 //upload image 
 router.post('/import', upload.single("file") , importFileCategory)
 
